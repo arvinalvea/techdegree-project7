@@ -36,6 +36,12 @@
     height: 40px;
 }
 
+.members-text > a {
+    text-decoration: none;
+    color: #7377BF;
+
+}
+
 /* ============================================= */
 /*              Layout styles                    */
 /* ============================================= */
@@ -87,6 +93,11 @@ main {
     display: grid;
 }
 
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
+}
+
 /* ============================================= */
 /*              Media queries                    */
 /* ============================================= */
@@ -120,7 +131,11 @@ main {
         grid-column: 2 / span 1;
     }
 
+    .widget-container-full {
+        width: 90vw;
+    }
 
-
-
+    .widget-container-half {
+        width: 45vw;
+    }
 }

@@ -1,5 +1,18 @@
+/* ============================================= */
+/*               Variables                       */
+/* ============================================= */
+
 const alertBanner = document.getElementById("alert");
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+
+/* ============================================= */
+/*           Chart Variables/Object Literals     */
+/* ============================================= */
+
 let trafficCanvas = document.getElementById("traffic-chart");
+// data for traffic line chart
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -60,6 +73,7 @@ let dailyChart = new Chart(dailyCanvas, {
 });
 
 const mobileCanvas = document.getElementById("mobile-chart");
+// data for mobile user doughnut chart
 const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],
     datasets: [{
@@ -88,6 +102,10 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
+/* ============================================= */
+/*                    Main                       */
+/* ============================================= */
+
 
 // create the html for the banner
 alertBanner.innerHTML = 
@@ -102,5 +120,18 @@ alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
         alertBanner.style.display = "none";
+    }
+});
+
+send.addEventListener('click', () => {
+    // ensure user and message fields are filled out
+    if (user.value === "" && message.value === "") {
+        alert("Please fill out user and message fields before sending");
+    } else if (user.value === "") {
+        alert("Please fill out user field before sending");
+    } else if (message.value === "") {
+        alert("Please fill out message field before sending");
+    } else {
+        alert(`Message successfully sent to ${user.value}`);
     }
 });

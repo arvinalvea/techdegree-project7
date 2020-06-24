@@ -43,6 +43,26 @@ h3 {
     height: 30px;
 }
 
+.alert {
+    background: #7377BF;
+    width: 93vw;
+    margin: 10px auto;
+}
+
+.alert-banner {
+    margin-left: 10px;
+}
+
+.alert-banner-close {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+#alert {
+    color: white;
+    font-size: .8em;
+}
+
 .social-image {
     background: #7377BF;
     border-radius: 50%;
@@ -175,6 +195,7 @@ main {
 header,
 nav,
 .bell-div,
+.alert-banner,
 .social-stats,
 .social-container {
     display: flex;

@@ -28,7 +28,7 @@ nav {
     justify-content: center;
     padding: 5px;
     background: #4D4C72;
-    width: 100vw;
+    width: 100%;
 }
 
 h3 {
@@ -456,6 +456,7 @@ nav,
 /* ============================================= */
 
 @media(min-width: 768px) {
+    
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
@@ -490,5 +491,14 @@ nav,
 
     .widget-container-half {
         width: 45vw;
+    }
+
+    nav {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+   
+    nav a {
+        margin: 15px auto;
     }
 }

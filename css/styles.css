@@ -7,11 +7,33 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+header {
+    grid-area: header;
+    height: 70px;
+    background: #7377BF;
+}
+
+header h1 {
+    font-size: 1.5em;
+    align-self: center;
+    margin-right: auto;
+    margin-left: 15px;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    justify-content: center;
+    padding: 5px;
+    background: #4D4C72;
+}
+
 h3 {
     color: #919191;
-    font-size: .6em;
+    font-size: .8em;
     font-weight: bold;
     margin-left: 10px;
+    margin-top: 20px
 }
 
 .bell-graphic {
@@ -46,7 +68,7 @@ h3 {
 .alert {
     background: #7377BF;
     width: 93vw;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .alert-banner {
@@ -61,6 +83,40 @@ h3 {
 #alert {
     color: white;
     font-size: .8em;
+}
+
+.headline {
+    margin-right: auto;
+}
+
+.traffic {
+    width: 93vw;
+    margin: 0 auto;
+}
+
+.traffic-header > h3 {
+    margin-right: auto;
+}
+
+.traffic-header > ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.traffic-nav {
+    list-style: none;
+}
+
+.traffic-nav-link {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #919191;
+    font-size: .7em;
+    margin-left: 20px;    
+}
+
+#traffic-chart {
+    margin-top: 15px;
 }
 
 .social-image {
@@ -128,35 +184,20 @@ h3 {
     border: 1px solid #D5D5D5;
 }
 
-header {
-    grid-area: header;
-    height: 70px;
-    background: #7377BF;
-}
-
-header h1 {
-    font-size: 1.5em;
-    align-self: center;
-    margin-right: auto;
-    margin-left: 15px;
-    color: white;
-}
-
-nav {
-    grid-area: nav;
-    justify-content: center;
-    padding: 5px;
-    background: #4D4C72;
-}
-
 nav > a {
     margin: 15px;
 }
 
-
 main {
     grid-area: main;
     display: grid;
+}
+
+.main-header {
+    flex-direction: row;
+    width: 93vw;
+    margin: 10px auto;
+    align-items: center;
 }
 
 .social-stats {
@@ -188,14 +229,22 @@ main {
     width: 95vw;
 }
 
+#traffic-chart,
+#daily-chart,
+#mobile-chart {
+    margin-bottom: 30px;
+}
+
 /* ============================================= */
 /*              Flexbox Containers               */
 /* ============================================= */
 
 header,
 nav,
+.main-header,
 .bell-div,
 .alert-banner,
+.traffic-header,
 .social-stats,
 .social-container {
     display: flex;

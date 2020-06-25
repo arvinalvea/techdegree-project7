@@ -116,6 +116,7 @@ h3 {
 
 .traffic-header > h3 {
     margin-right: auto;
+    margin-left: 0;
 }
 
 .traffic-header > ul {
@@ -140,7 +141,8 @@ h3 {
 }
 
 .daily > h3,
-.mobile-users > h3 {
+.mobile-users > h3,
+.members > h3 {
     margin-left: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -186,6 +188,42 @@ h3 {
     color: #585858;
     padding-bottom: 15px;
     font-weight: 300;
+}
+
+.members-container {
+    margin: 10px auto 0 auto;
+    width: 90vw;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D5D5D5;;
+}
+
+.members-container:last-child {
+    border: none;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.members-text,
+.members-container > p {
+    color: #585858;
+    font-size: .8em;
+}
+
+.members-text p,
+.members-text a {
+    margin-left: 10px;
+}
+
+.members-text p{
+    margin-bottom: 5px;
+}
+
+.members-text {
+    margin-right: auto;
 }
 
 /* ============================================= */
@@ -282,7 +320,8 @@ nav,
 .main-header-search,
 .traffic-header,
 .social-stats,
-.social-container {
+.social-container,
+.members-container {
     display: flex;
 }
 

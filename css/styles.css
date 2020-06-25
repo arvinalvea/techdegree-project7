@@ -213,17 +213,30 @@ h3 {
     font-size: .8em;
 }
 
+.members-text {
+    flex-direction: column;
+    justify-content: center;
+}
+
 .members-text p,
 .members-text a {
     margin-left: 10px;
 }
 
-.members-text p{
-    margin-bottom: 5px;
+.members-text p {
+    margin-top: 0;
 }
 
 .members-text {
     margin-right: auto;
+}
+
+#timeP {
+    font-size: .8em;
+} 
+
+#greater-than-symbol {
+    font-size: 1.5em;
 }
 
 /* ============================================= */
@@ -321,7 +334,8 @@ nav,
 .traffic-header,
 .social-stats,
 .social-container,
-.members-container {
+.members-container,
+.members-text {
     display: flex;
 }
 

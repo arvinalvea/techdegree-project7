@@ -77,6 +77,7 @@ h3 {
 
 .alert {
     background: #7377BF;
+    border-radius: 5px;
     width: 90vw;
     margin: 20px auto;
 }
@@ -144,7 +145,8 @@ h3 {
 .mobile-users > h3,
 .members > h3,
 .recent-activity > h3,
-.message > h3 {
+.message > h3,
+.settings > h3 {
     margin-left: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -292,6 +294,11 @@ main {
     background: #F7F7F7;
 }
 
+input[type="search"] {
+    border-radius: 5px;
+    border: 1px solid #D5D5D5;
+}
+
 .main-header-search > input {
     margin-left: auto;
     margin-right: 25px;
@@ -316,6 +323,7 @@ main {
     flex-wrap: wrap;
     background: #F7F7F7;
     border: .5px solid #B8B8B8;
+    border-radius: 5px;
     height: 55px;
     flex-basis: 30%;
     align-content: center;
@@ -329,7 +337,6 @@ main {
 
 .message {
     flex-direction: column;
-
 }
 
 .widget-container {
@@ -339,7 +346,8 @@ main {
 }
 
 .widget-container input,
-.widget-container textarea {
+.widget-container textarea,
+#timezone {
     margin-bottom: 10px;
     background: #F7F7F7;
     border: 1px solid #B8B8B8;
@@ -358,6 +366,7 @@ main {
     color: white;
     margin-bottom: 15px;
     border: none;
+    border-radius: 5px;
     height: 40px;
     font-size: .7em;
 }
@@ -366,6 +375,56 @@ main {
     font-size: .8em;
     color: #C6C6C6;
     padding: 10px;
+}
+
+.settings {
+    flex-direction: column;
+}
+
+.settings-div {
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 0 auto;
+    font-size: .8em;
+    color: #919191;
+}
+
+.settings-div > p {
+    flex: 1;
+    flex-basis: 55%;
+}
+
+#userField,
+#messageField {
+    border-radius: 5px;
+}
+
+#timezone {
+    width: 100%;
+    height: 40px;
+    font-size: .8em;
+    color: #C6C6C6;
+    border-radius: 5px;
+}
+
+#save,
+#cancel {
+    width: 43vw;
+    height: 40px;
+    color: white;
+    border: none;
+    font-size: .8em;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+#cancel {
+    background: #8B8B8B;
+}
+
+#save {
+    margin-right: 20px;
+    background: #7377BF;
 }
 
 
@@ -385,7 +444,10 @@ nav,
 .members-container,
 .members-text,
 .message,
-.widget-container {
+.widget-container,
+.settings,
+.settings-div,
+.settings-button {
     display: flex;
 }
 

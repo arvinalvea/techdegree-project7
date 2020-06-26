@@ -180,7 +180,7 @@ h3 {
 #social-headline {
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 900;
-    font-size: .5em;
+    font-size: .9em;
     color: #7377BF;
     padding-top: 15px;
     padding-bottom: 0;
@@ -188,7 +188,7 @@ h3 {
 
 .social-text > p {
     margin: 0 auto;
-    font-size: 1.4em;
+    font-size: 1.8em;
     color: #585858;
     padding-bottom: 15px;
     font-weight: 300;
@@ -196,7 +196,7 @@ h3 {
 
 .members-container {
     margin: 10px auto 0 auto;
-    width: 90vw;
+    width: 100%;
     padding-bottom: 20px;
     border-bottom: 1px solid #D5D5D5;;
 }
@@ -209,12 +209,14 @@ h3 {
     border-radius: 50%;
     height: 70px;
     width: 70px;
+    margin-left: 25px;
 }
 
 .members-text,
 .members-container > p {
     color: #585858;
     font-size: .8em;
+    margin-right: 20px;
 }
 
 .members-text {
@@ -240,8 +242,13 @@ h3 {
     margin-bottom: 20px;
 }
 
+.recent-activity .members-container {
+    padding-bottom: 15px;
+}
+
 #timeP {
     font-size: .8em;
+    margin-bottom: 0;
 } 
 
 #greater-than-symbol {
@@ -282,7 +289,7 @@ main {
 
 .main-header {
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
 }
@@ -308,8 +315,9 @@ input[type="search"] {
 .social-stats {
     flex-wrap: wrap;
     margin-bottom: 20px;
-    justify-content: space-between;
     padding-bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .social-stats > h3 {
@@ -320,13 +328,20 @@ input[type="search"] {
 
 .social-container {
     flex-direction: row;
-    flex-wrap: wrap;
     background: #F7F7F7;
     border: .5px solid #B8B8B8;
     border-radius: 5px;
-    height: 55px;
-    flex-basis: 30%;
-    align-content: center;
+    flex-basis: 29%;
+    flex-grow: 1;
+}
+
+.social-container:nth-child(2),
+.social-container:nth-child(3) {
+    margin-right: 20px;
+}
+
+.social-container:last-child {
+    margin-right: 0;
 }
 
 #traffic-chart,
@@ -337,6 +352,7 @@ input[type="search"] {
 
 .message {
     flex-direction: column;
+    width: 100%;
 }
 
 .widget-container {
@@ -379,6 +395,7 @@ input[type="search"] {
 
 .settings {
     flex-direction: column;
+    width: 100%;
 }
 
 .settings-div {
@@ -500,5 +517,32 @@ nav,
    
     nav a {
         margin: 15px auto;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-header-search {
+        height: 80px;
+    }
+
+    .headline {
+        margin-left: 40px;
+    }
+
+    .daily,
+    .mobile-users {
+        width: 50%;
+    }
+
+    .social-container {
+        width: 20px;
+    }
+
+    .recent-activity,
+    .members {
+        width: 50%;
     }
 }

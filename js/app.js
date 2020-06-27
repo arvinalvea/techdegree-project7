@@ -108,10 +108,6 @@ let mobileChart = new Chart(mobileCanvas, {
 /*                    Main                       */
 /* ============================================= */
 
-// create the html for notifications
-
-
-
 // create the html for the banner
 alertBanner.innerHTML = 
     `

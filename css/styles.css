@@ -10,7 +10,7 @@
 header {
     grid-area: header;
     height: 70px;
-    width: 100vw;
+    width: 100%;
     background: #7377BF;
 }
 
@@ -45,7 +45,6 @@ textarea {
 }
 
 .bell-graphic {
-    position: relative;
     display: block;
     width: 1.5em;
     align-self: center;
@@ -63,14 +62,15 @@ textarea {
     width: 10px;
     background: #64F455;
     border-radius: 50%;
-    top: 20px;
-    right: 168px;
+    top: 7px;
+    right: 7px;
 }
 
 .bell-div {
     border-right: 1px solid #5C5C5C;
     height: 60%;
     margin-top: 15px;
+    position: relative;
 }
 
 .profile-picture {
@@ -119,16 +119,17 @@ textarea {
 
 .headline {
     margin-right: auto;
-    margin-left: 15px;
+    padding-left: 2em;
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #919191;
+    flex-grow: 1;
 }
 
 .traffic,
 .widget-container-half,
 .social-stats {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -213,6 +214,7 @@ textarea {
     font-size: 1.8em;
     color: #585858;
     padding-bottom: 15px;
+    padding-right: 20px;
     font-weight: 300;
 }
 
@@ -321,6 +323,8 @@ main {
     width: 75%;
     height: 66px;
     background: #F7F7F7;
+
+    flex: 7;
 }
 
 input[type="search"] {
@@ -336,11 +340,14 @@ input[type="search"] {
 }
 
 .social-stats {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 20px;
     padding-bottom: 25px;
-    flex-direction: row;
-    justify-content: space-between;
+    /* flex-direction: row; */
+}
+
+.social-stats-wrapper {
+    flex-grow: 1;
 }
 
 .social-stats > h3 {
@@ -356,12 +363,14 @@ input[type="search"] {
     border-radius: 5px;
     flex-basis: 29%;
     flex-grow: 1;
+    margin-right: 10px;
+    justify-content: center;
 }
 
-.social-container:nth-child(2),
+/* .social-container:nth-child(2),
 .social-container:nth-child(3) {
     margin-right: 20px;
-}
+} */
 
 .social-container:last-child {
     margin-right: 0;
@@ -478,7 +487,8 @@ nav,
 .alert-banner,
 .main-header-search,
 .traffic-header,
-.social-stats,
+.social-stats-wrapper,
+/* .social-stats, */
 .social-container,
 .members-container,
 .members-text,
@@ -532,9 +542,14 @@ nav,
         width: 45vw;
     }
 
+    /* header {
+        width: 100%;
+    } */
+
     nav {
         justify-content: flex-start;
         flex-direction: column;
+        width: 100%;
     }
    
     nav a {
@@ -544,6 +559,10 @@ nav,
     main {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .main-header {
+        width: 100%;
     }
 
     .main-header-search {

@@ -4,6 +4,7 @@
 
 const alertBanner = document.getElementById("alert");
 const greenBadge = document.getElementById("green-badge");
+
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
@@ -106,6 +107,9 @@ let mobileChart = new Chart(mobileCanvas, {
 /* ============================================= */
 /*                    Main                       */
 /* ============================================= */
+
+// create the html for notifications
+
 
 
 // create the html for the banner
